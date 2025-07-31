@@ -1,11 +1,7 @@
-hrs = input("Enter hours:")
-rate = input("Enter Rate:")
-hours = float(hrs)
+hours = float(input("Enter hours:"))
+rate = float(input("Enter Rate:"))
 if hours>40:
-    normal_pay = 40 * float(rate)
-    overtime_hrs = hours - 40
-    gross_pay = overtime_hrs * 1.5 * float(rate) + normal_pay
-    print(gross_pay)
+    gross_pay = (hours-40) * 1.5 * rate + 40 * rate
 else:
-    normal_pay = float(rate) * hours
-    print(normal_pay)
+    gross_pay = rate * hours
+print(gross_pay)
